@@ -6,7 +6,7 @@ import { ConfigType } from '@nestjs/config';
 import { PayloadToken } from '../models/token.model';
 
 @Injectable()
-export class jwrStrategy extends PassportStrategy(Strategy, 'jwt') {
+export class jwtStrategy extends PassportStrategy(Strategy, 'jwt') {
   constructor(@Inject(config.KEY) configService: ConfigType<typeof config>) {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
