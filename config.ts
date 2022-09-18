@@ -8,6 +8,6 @@ export default registerAs('config', () => {
       password: process.env.POSTGRES_PASSWORD,
       user: process.env.POSTGRES_USER,
     },
-    jwtSecret: process.env.JWTSECRET,
+    jwtSecret: process.env.JWT_SECRET,
   };
 });
